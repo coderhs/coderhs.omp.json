@@ -42,12 +42,12 @@
           "template": " on{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }}<red> \uf044 {{ .Working.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<yellow> \uf046 {{ .Staging.String }}</>{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }}",
           "type": "git"
         },
-        {
+         {
           "background": "#29315A",
           "foreground": "#E4F34A",
           "leading_diamond": " \ue0b6",
           "properties": {
-            "fetch_version": false
+            "fetch_version": true
           },
           "style": "diamond",
           "template": "\ue235{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}",
@@ -59,7 +59,7 @@
           "foreground": "#7FD5EA",
           "leading_diamond": " \ue0b6",
           "properties": {
-            "fetch_version": false
+            "fetch_version": true
           },
           "style": "diamond",
           "template": "\ufcd1{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
@@ -95,7 +95,7 @@
           "foreground": "#E64747",
           "leading_diamond": " \ue0b6",
           "properties": {
-            "fetch_version": false
+            "fetch_version": true
           },
           "style": "diamond",
           "template": "\ue738{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
@@ -107,12 +107,36 @@
           "foreground": "#9B6BDF",
           "leading_diamond": " \ue0b6",
           "properties": {
-            "fetch_version": false
+            "fetch_version": true
           },
           "style": "diamond",
           "template": "\ue624{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
           "trailing_diamond": "\ue0b4",
           "type": "julia"
+        },
+        {
+          "background": "#06A4CE",
+          "foreground": "#ffffff",
+          "leading_diamond": " \ue0b6",
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "diamond",
+          "template": " \ue28e {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+          "trailing_diamond": "\ue0b4",
+          "type": "flutter"
+        },
+        {
+          "background": "#06A4CE",
+          "foreground": "#ffffff",
+          "leading_diamond": " \ue0b6",
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "diamond",
+          "template": " \uE798 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+          "trailing_diamond": "\ue0b4",
+          "type": "dart"
         }
       ],
       "type": "prompt"
