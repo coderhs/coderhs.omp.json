@@ -42,100 +42,92 @@
           "template": " on{{ .UpstreamIcon }}{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }}<red> \uf044 {{ .Working.String }}</>{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }}<yellow> \uf046 {{ .Staging.String }}</>{{ end }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }}",
           "type": "git"
         },
-         {
-          "background": "#29315A",
+        {
           "foreground": "#E4F34A",
-          "leading_diamond": " \ue0b6",
+          "leading_diamond": " | ",
           "properties": {
             "fetch_version": true
           },
           "style": "diamond",
-          "template": "\ue235{{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}",
-          "trailing_diamond": "\ue0b4",
+          "template": "\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}",
+          "trailing_diamond": "",
           "type": "python"
         },
         {
-          "background": "#29315A",
           "foreground": "#7FD5EA",
-          "leading_diamond": " \ue0b6",
+          "leading_diamond": " | ",
           "properties": {
             "fetch_version": true
           },
           "style": "diamond",
-          "template": "\ufcd1{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
-          "trailing_diamond": "\ue0b4",
+          "template": "\ufcd1 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "trailing_diamond": "",
           "type": "go"
         },
         {
-          "background": "#29315A",
           "foreground": "#42E66C",
-          "leading_diamond": " \ue0b6",
+          "leading_diamond": " | ",
           "properties": {
             "fetch_version": true
           },
           "style": "diamond",
-          "template": "\ue718{{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
-          "trailing_diamond": "\ue0b4",
+          "template": "\ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
+          "trailing_diamond": "",
           "type": "node"
         },
         {
-          "background": "#29315A",
           "foreground": "#E64747",
-          "leading_diamond": " \ue0b6",
+          "leading_diamond": " | ",
           "properties": {
             "fetch_version": true
           },
           "style": "diamond",
-          "template": "\ue791{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
-          "trailing_diamond": "\ue0b4",
+          "template": "\ue791 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "trailing_diamond": "",
           "type": "ruby"
         },
         {
-          "background": "#29315A",
           "foreground": "#E64747",
-          "leading_diamond": " \ue0b6",
+          "leading_diamond": " | ",
           "properties": {
             "fetch_version": true
           },
           "style": "diamond",
-          "template": "\ue738{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
-          "trailing_diamond": "\ue0b4",
+          "template": "\ue738 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}",
+          "trailing_diamond": "",
           "type": "java"
         },
         {
-          "background": "#29315A",
           "foreground": "#9B6BDF",
-          "leading_diamond": " \ue0b6",
+          "leading_diamond": " | ",
           "properties": {
             "fetch_version": true
           },
           "style": "diamond",
-          "template": "\ue624{{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
-          "trailing_diamond": "\ue0b4",
+          "template": "\ue624 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
+          "trailing_diamond": "",
           "type": "julia"
         },
         {
-          "background": "#06A4CE",
           "foreground": "#ffffff",
-          "leading_diamond": " \ue0b6",
+          "leading_diamond": " | ",
           "properties": {
-            "fetch_version": true
+            "fetch_version": false
           },
           "style": "diamond",
           "template": " \ue28e {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
-          "trailing_diamond": "\ue0b4",
+          "trailing_diamond": "",
           "type": "flutter"
         },
         {
-          "background": "#06A4CE",
           "foreground": "#ffffff",
-          "leading_diamond": " \ue0b6",
+          "leading_diamond": " | ",
           "properties": {
-            "fetch_version": true
+            "fetch_version": false
           },
           "style": "diamond",
           "template": " \uE798 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }} ",
-          "trailing_diamond": "\ue0b4",
+          "trailing_diamond": "",
           "type": "dart"
         }
       ],
@@ -167,7 +159,7 @@
         {
           "foreground": "green",
           "style": "plain",
-          "template": "\u276f",
+          "template": "🚀",
           "type": "text"
         }
       ],
